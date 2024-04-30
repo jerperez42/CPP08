@@ -6,11 +6,11 @@
 #    By: jerperez <jerperez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/06 10:28:10 by jerperez          #+#    #+#              #
-#    Updated: 2024/04/29 15:58:44 by jerperez         ###   ########.fr        #
+#    Updated: 2024/04/30 14:11:38 by jerperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = easyfind
 
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98	
