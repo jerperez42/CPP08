@@ -6,7 +6,7 @@
 #    By: jerperez <jerperez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/02/06 10:28:10 by jerperez          #+#    #+#              #
-#    Updated: 2024/04/30 14:17:54 by jerperez         ###   ########.fr        #
+#    Updated: 2024/05/01 14:03:26 by jerperez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ NAME = ex01
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98	
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp \
+			Span.cpp
 
 OBJ_DIR	=	obj
 
