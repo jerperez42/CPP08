@@ -6,7 +6,7 @@
 /*   By: jerperez <jerperez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 14:38:18 by jerperez          #+#    #+#             */
-/*   Updated: 2024/05/01 15:03:08 by jerperez         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:45:50 by jerperez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,26 @@
 # define MUTANTSTACK_HPP
 
 #include <stack>
+#include <deque>
 
 template<class T>
 class MutantStack:
-	public std::stack<T> 
+	public std::deque<T>
 {
 	public:
 		MutantStack(void);
 		~MutantStack(void);
-		MutantStack(const MutantStack&);
-		MutantStack	&operator=(const MutantStack&);
+		MutantStack(MutantStack&);
+		MutantStack	&operator=(MutantStack&);
 
-		typedef __gnu_cxx::__normal_iterator<T *, std::vector<T>> iterator;
-		iterator	begin(void);
-		iterator	end(void);
+		typedef typename std::deque<T>::iterator  iterator;
+		T				&top(void);
+		bool			empty(void) const;
+		std::size_t		size(void) const;
+		iterator		begin(void);
+		iterator		end(void);
+		void push(const T&);
+		void pop(void);
 };
 
 #include "MutantStack.tpp"
